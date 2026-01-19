@@ -19,6 +19,10 @@ The application is designed for experimentation, learning, and quick demos of cl
 4. The language with the highest probability is selected.
 5. If the confidence score is below the threshold, the app warns the user instead of guessing.
 
+## Try it out
+The application is deployed and ready to use. Enter a short piece of text in any language and see how the model detects and scores the result in real time.
+https://language-detector-app.streamlit.app/
+
 
 ## Tech Stack
 
