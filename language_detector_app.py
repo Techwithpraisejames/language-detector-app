@@ -1,10 +1,13 @@
 import streamlit as st
+from pathlib import Path
 import joblib
 import numpy as np
 
 # Load the saved model and vectorizer
-language_model = joblib.load(r'C:\Users\HP-PC\Downloads\language_model.joblib', mmap_mode='r')
-vectorizer = joblib.load(r'C:\Users\HP-PC\Downloads\vectorizer.joblib', mmap_mode='r')
+BASE_DIR = Path(__file__).resolve().parent
+
+language_model = joblib.load(BASE_DIR / "language_model.joblib")
+vectorizer = joblib.load(BASE_DIR / "vectorizer.joblib")
 
 st.title('Language Detection Application')
 
@@ -30,3 +33,4 @@ if user_input:
         st.write(f"Detected Language: {predicted_language} (Confidence: {max_probability:.2f})")
     else:
         st.write(f"Could not confidently detect the language. Please try again with a different text. (Highest confidence for {predicted_language}: {max_probability:.2f})")
+
