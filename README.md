@@ -1,8 +1,6 @@
 # language-detector-app
 This project is a lightweight **language detection web application** built with **Streamlit** and **scikit-learn**. It uses a pre-trained machine learning model and text vectorizer to detect the language of user-provided text and report a confidence score for the prediction.
 
-The application is designed for experimentation, learning, and quick demos of classical NLP pipelines in Python.
-
 ## Features
 
 - Detects the language of any input text (17 languages for now)
